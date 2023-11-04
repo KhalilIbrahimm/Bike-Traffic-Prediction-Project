@@ -44,8 +44,12 @@ Web Interface Creation: To enhance user interaction, there's a plan to design a 
     pip install waitress 
     pip install requests
     ```
+    or just this:
+   ```bash
+   pip install numpy pandas Plotly scikit-learn flask waitress requests
+   ```
 
-4. Ensure you have the dataset in the project folder, under the "data" directory. The dataset should be the same as the one available at UIB with the same filename.
+5. Ensure you have the dataset in the project folder, under the "data" directory. The dataset should be the same as the one available at UIB with the same filename.
 
 ## File Structure and Explanation
 
