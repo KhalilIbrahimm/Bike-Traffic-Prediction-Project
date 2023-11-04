@@ -6,7 +6,7 @@ This project "Bike Traffic Prediction", is focused on forecasting the number of 
 
 Traffic Data from Statens vegvesen: This dataset comprises several columns including "Dato" (Date), "Fra tidspunkt" (From Time), "Felt" (Lane), and "Trafikkmengde" (Traffic Volume). The main objective is to forecast the "Trafikkmengde" values for entries where the "Felt" is marked as "Totalt" (Total). The data for 2023 is notably absent and hence requires prediction.
 
-Weather Data from Geofysisk institutt: Weather data is partitioned into separate files for each year. It encompasses columns like "Dato" (Date), "Tid" (Time), and other weather-related columns. The predictions can incorporate any relevant weather data, given that it has been recorded no later than the specified "Fra tidspunkt" (From Time). It's crucial to note that the dataset uses the code "9999.99" to indicate missing data.
+Weather Data from Geofysisk institutt: Weather data is partitioned into separate files for each year. It encompasses columns like "Dato" (Date), "Tid" (Time), and other weather-related columns. The predictions can incorporate any relevant weather data, given that it has been recorded no later than the specified "Fra tidspunkt" (From Time).
 
 ### Project Components:
 
