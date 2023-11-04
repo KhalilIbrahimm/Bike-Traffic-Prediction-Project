@@ -143,7 +143,7 @@ class ModelImplementation:
         pipeline_model = self.pipeline(svr_model)
         return self.cross_validation(X_train, y_train, params, pipeline_model, model_name="SupportVectorRegressor")
 
-    def MLPregressor(self, X_train, y_train):
+    def MLPRegressor(self, X_train, y_train):
         """
         Executes the MLPRegressor neural network model with cross-validation to evaluate the model.
 

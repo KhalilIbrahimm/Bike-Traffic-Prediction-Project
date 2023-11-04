@@ -4,26 +4,72 @@ Fitting 5 folds for each of 2 candidates, totalling 10 fits
 
 Cross validation best model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
                 ('model', DummyRegressor())])
-Med parametere: {'model__strategy': 'mean'}
-Mean RMSE: 53.44397391649473
-Cross Validation tid: 0.038m:2.2530391216278076s
+With parameters: {'model__strategy': 'mean'}
+Mean RMSE: 71.50881844169804
+Cross Validation time: 0.054m:3.2395780086517334s
 
 ** LinearRegression **
 Fitting 5 folds for each of 1 candidates, totalling 5 fits
 
 Cross validation best model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
                 ('model', LinearRegression())])
-Med parametere: {}
-Mean RMSE: 44.71475349436791
-Cross Validation tid: 0.001m:0.0488588809967041s
+With parameters: {}
+Mean RMSE: 64.06631352712573
+Cross Validation time: 0.006m:0.36258506774902344s
+
+** KNeighbiorsRegressor **
+Fitting 5 folds for each of 8 candidates, totalling 40 fits
+
+Cross validation best model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
+                ('model',
+                 KNeighborsRegressor(n_neighbors=7, weights='distance'))])
+With parameters: {'model__n_neighbors': 7, 'model__weights': 'distance'}
+Mean RMSE: 58.02663130095921
+Cross Validation time: 0.228m:13.661335945129395s
+
+** RandomForestRegressor **
+Fitting 5 folds for each of 4 candidates, totalling 20 fits
+
+Cross validation best model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
+                ('model',
+                 RandomForestRegressor(n_estimators=1000, random_state=2023))])
+With parameters: {'model__n_estimators': 1000}
+Mean RMSE: 30.486816136895612
+Cross Validation time: 15.655m:939.3183720111847s
+
+** SupportVectorRegressor **
+Fitting 5 folds for each of 18 candidates, totalling 90 fits
+
+Cross validation best model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
+                ('model', SVR(C=3, gamma='auto', kernel='poly'))])
+With parameters: {'model__C': 3, 'model__gamma': 'auto', 'model__kernel': 'poly'}
+Mean RMSE: 65.58903285191536
+Cross Validation time: 28.980m:1738.8269040584564s
+
+** MLPRegressor **
+Fitting 5 folds for each of 9 candidates, totalling 45 fits
+
+Cross validation best model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
+                ('model',
+                 MLPRegressor(alpha=0.1, hidden_layer_sizes=(400, 4),
+                              max_iter=2000, random_state=2023))])
+With parameters: {'model__activation': 'relu', 'model__alpha': 0.1, 'model__hidden_layer_sizes': (400, 4), 'model__solver': 'adam'}
+Mean RMSE: 47.92583271954997
+Cross Validation time: 21.869m:1312.1516711711884s
 
 
-OVERSIKT OVER ALLE MODELLER:
-    - Model: DummyRegressor, RMSE: 53.44397391649473
-    - Model: LinearRegression, RMSE: 44.71475349436791
+OVERVIEW OF ALL MODELS:
+    - Model: DummyRegressor, RMSE: 71.50881844169804
+    - Model: LinearRegression, RMSE: 64.06631352712573
+    - Model: KNeighbiorsRegressor, RMSE: 58.02663130095921
+    - Model: RandomForestRegressor, RMSE: 30.486816136895612
+    - Model: SupportVectorRegressor, RMSE: 65.58903285191536
+    - Model: MLPRegressor, RMSE: 47.92583271954997
 Model saved!
 
 
 --> Best Final Cross Val Model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
-                ('model', LinearRegression())]).
---> Cross Val Mean RMSE: 44.71475349436791
+                ('model',
+                 RandomForestRegressor(n_estimators=1000, random_state=2023))]).
+--> Cross Val Mean RMSE: 30.486816136895612
+--> Final Model Test RMSE: 28.979109774763103
