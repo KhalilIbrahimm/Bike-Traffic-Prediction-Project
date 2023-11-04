@@ -3,15 +3,18 @@
 #import telegram 
 import requests  # Requests library is used for making HTTP calls to Telegram API.
 
+## Getting Started with Telegram Integration:
+# To integrate with Telegram and obtain your token and chat ID, follow the steps outlined in this guide: https://docs.influxdata.com/kapacitor/v1/reference/event_handlers/telegram
+
 
 # Define a Bot class.
 class Bot:
     # Constructor for the Bot class.
     def __init__(self, MESSSAGE):
-        # Telegram bot token. Be careful! This should not be exposed, especially in shared or public code.
-        self.TOKEN = ""  
+        # Telegram bot token. 
+        self.TOKEN = "WRITE YOUR TOKEN HERE"  
         # Chat ID where the message will be sent.
-        self.CHAT_ID = ""
+        self.CHAT_ID = "WRITE YOUR CHAT ID HERE"
         # Message to be sent.
         self.MESSAGE = MESSSAGE
 
