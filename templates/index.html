@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Science API</title>
+  </head>
+  <body>
+    <div class='login'>
+      <h1>Predict Volum totalt</h1>
+
+      <form action="{{ url_for('predict') }}" method='post'>
+        <input type='date' name='År' placeholder='År' required='required' /> <br>
+        <input type='time' name='Tid' placeholder='Tid' required='required' /> <br>
+        <input type='number' name='Globalstraling' placeholder='Globalstraling' /> <br>
+        <input type='number' name='Solskinstid' placeholder='Solskinstid' /> <br>
+        <input type='number' name='Lufttemperatur' placeholder='Lufttemperatur' /> <br>
+        <input type='number' name='Vindretning' placeholder='Vindretning' /> <br>
+        <input type='number' name='Vindstyrke' placeholder='Vindstyrke' /> <br>
+        <input type='number' name='Lufttrykk' placeholder='Lufttrykk' /> <br>
+        <input type='number' name='Vindkast' placeholder='Vindkast' /> <br>
+
+        <br><br>
+
+        <button type='submit' value='Submit'>Predict</button>
+        <button type='reset' value='Reset'>Reset</button>
+      </form>
+
+      <br>
+      {{ prediction_text }}
+    </div>
+  </body>
+</html>

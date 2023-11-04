@@ -1,0 +1,29 @@
+
+** DummyRegressor **
+Fitting 5 folds for each of 2 candidates, totalling 10 fits
+
+Cross validation best model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
+                ('model', DummyRegressor())])
+Med parametere: {'model__strategy': 'mean'}
+Mean RMSE: 53.44397391649473
+Cross Validation tid: 0.038m:2.2530391216278076s
+
+** LinearRegression **
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+
+Cross validation best model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
+                ('model', LinearRegression())])
+Med parametere: {}
+Mean RMSE: 44.71475349436791
+Cross Validation tid: 0.001m:0.0488588809967041s
+
+
+OVERSIKT OVER ALLE MODELLER:
+    - Model: DummyRegressor, RMSE: 53.44397391649473
+    - Model: LinearRegression, RMSE: 44.71475349436791
+Model saved!
+
+
+--> Best Final Cross Val Model: Pipeline(steps=[('imputer', KNNImputer()), ('scaler', StandardScaler()),
+                ('model', LinearRegression())]).
+--> Cross Val Mean RMSE: 44.71475349436791
